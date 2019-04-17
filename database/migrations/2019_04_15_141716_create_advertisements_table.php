@@ -20,11 +20,11 @@ class CreateAdvertisementsTable extends Migration
             $table->float('price');
             $table->string('phone');
             $table->text('image');
-            $table->unsignedBigInteger('id_category_sub_category');
+            $table->unsignedBigInteger('id_sub_category');
             $table->unsignedBigInteger('id_county');
             $table->unsignedBigInteger('id_user');
 
-            $table->foreign('id_category_sub_category')->references('id')->on('categories_sub_categories');
+            $table->foreign('id_sub_category')->references('id')->on('sub_categories');
             $table->foreign('id_county')->references('id')->on('counties');
             $table->foreign('id_user')->references('id')->on('users');
 

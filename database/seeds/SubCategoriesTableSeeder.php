@@ -14,21 +14,24 @@ class SubCategoriesTableSeeder extends Seeder
         $data = [
             [
                 'id' => 1,
-                'name' => 'Sell',
+                'name' => 'Cars',
                 'created_at' => now(),
-                'updated_at' => now()
+                'updated_at' => now(),
+                'id_category' => 1
             ],
             [
                 'id' => 2,
-                'name' => 'Purchase',
+                'name' => 'Toys',
                 'created_at' => now(),
-                'updated_at' => now()
+                'updated_at' => now(),
+                'id_category' => 2
             ],
             [
                 'id' => 3,
-                'name' => 'Rent',
+                'name' => 'Sci-fi',
                 'created_at' => now(),
-                'updated_at' => now()
+                'updated_at' => now(),
+                'id_category' => 3
             ]
         ];
 
