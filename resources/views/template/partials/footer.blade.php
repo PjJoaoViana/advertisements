@@ -1,23 +1,25 @@
-<footer class="main-footer">
-    <div class="footer-content">
-        <div class="container">
-            <div class="row">
+</div>
+<!-- /.wrapper -->
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="container">
+                <div class="row">
 
 
-                <div style="clear: both"></div>
+                    <div style="clear: both"></div>
 
-                <div class="col-xl-12">
+                    <div class="col-xl-12">
 
-                    <div class="copy-info text-center">
-                        &copy; 2017 BootClassified. All Rights Reserved.
+                        <div class="copy-info text-center">
+                            &copy; 2017 BootClassified. All Rights Reserved.
+                        </div>
+
                     </div>
 
                 </div>
-
             </div>
         </div>
-    </div>
-</footer>
+    </footer>
 
 {{--<!-- Modal Change City -->--}}
 {{--<div class="modal fade modalHasList" id="select-country" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"--}}

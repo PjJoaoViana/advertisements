@@ -1,5 +1,8 @@
-@include('template.partials.header')
-
+@extends('template.layouts.app')
+@section('title')
+    Seller Adds
+@endsection
+@section('content')
     <div class="intro" style="background-image: url('/template/images/bg6.jpg');">
         <div class="dtable hw100">
             <div class="dtable-cell hw100">
@@ -75,8 +78,4 @@
 
         </div>
     </div>
-
-</div>
-<!-- /.wrapper -->
-
-@include('template.partials.footer')
+@endsection
