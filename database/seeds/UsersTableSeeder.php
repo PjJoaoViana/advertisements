@@ -16,7 +16,7 @@ class UsersTableSeeder extends Seeder
                 'id' => 1,
                 'name' => 'Joao Viana',
                 'email' => 'joao.viana.it@gmail.com',
-                'password' =>  encrypt('Pjpearljam23'),
+                'password' =>  bcrypt('pjpearljam23'),
                 'created_at' => now(),
                 'updated_at' => now()
             ]

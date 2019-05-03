@@ -36,20 +36,16 @@
 
                 <div class="navbar-identity">
 
-
                     <a href="index.html" class="navbar-brand logo logo-title">
 {{--    			<span class="logo-icon"><i class="icon icon-search-1 ln-shadow-logo "></i>--}}
     			</span>Seller<span>adds</span> </a>
-
 
                     <button data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggler pull-right"
                             type="button">
 
                         <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 30 30" width="30" height="30" focusable="false"><title>Menu</title><path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/></svg>
 
-
                     </button>
-
 
                     <button
                             class="flag-menu country-flag d-block d-md-none btn btn-secondary hidden pull-right"
@@ -58,25 +54,35 @@
 
                 </div>
 
-
-
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav ml-auto navbar-right">
                         <li class="nav-item"><a href="category.html" class="nav-link"><i class="icon-th-thumb"></i> All Ads</a>
                         </li>
-                        <li class="dropdown no-arrow nav-item"><a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
+                        @guest
+                            <li class="nav-item"><a href="{{ url('/login') }}" class="nav-link"><i class="fas fa-sign-in-alt"></i> Login</a>
+                            </li>
+                        @else
+                            <li class="dropdown no-arrow nav-item"><a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
+                                    <span>Jhon Doe</span> <i class="icon-user fa"></i> <i class=" icon-down-open-big fa"></i></a>
+                                <ul
+                                        class="dropdown-menu user-menu dropdown-menu-right">
+                                    <li class="active dropdown-item"><a href="#"><i class="icon-home"></i> Account </a>
+                                    </li>
+                                    <li class="dropdown-item"><a href="#"><i class="icon-th-thumb"></i> My ads </a>
+                                    </li>
+                                    <li class="dropdown-item">
+                                        <a href="{{ route('logout') }}" onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                            <i class="fas fa-sign-out-alt"></i> Log out
+                                        </a>
+                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                            @csrf
+                                        </form>
 
-                                <span>Jhon Doe</span> <i class="icon-user fa"></i> <i class=" icon-down-open-big fa"></i></a>
-                            <ul
-                                    class="dropdown-menu user-menu dropdown-menu-right">
-                                <li class="active dropdown-item"><a href="account-home.html"><i class="icon-home"></i> Account </a>
-                                </li>
-                                <li class="dropdown-item"><a href="account-myads.html"><i class="icon-th-thumb"></i> My ads </a>
-                                </li>
-                                <li class="dropdown-item"><a href="login.html"><i class=" icon-logout "></i> Log out </a>
-                                </li>
-                            </ul>
-                        </li>
+                                    </li>
+                                </ul>
+                            </li>
+                        @endguest
                         <li class="postadd nav-item"><a class="btn btn-block   btn-border btn-post btn-danger nav-link" href="post-ads.html">Post Free Add</a>
                         </li>
                         <li class="dropdown  lang-menu nav-item">
